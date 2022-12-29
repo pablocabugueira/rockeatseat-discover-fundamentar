@@ -15,11 +15,17 @@ function sum(array) {
 
 function calculator() {
     let sumReceita = sum(saldo.receita)
-    let sumDespesa = sum(saldo.receita)
+    let sumDespesa = sum(saldo.despesa)
 
     let saldoTotal = sumReceita - sumDespesa
 
-    return saldoTotal
-    
-    console.log(saldoTotal)
+    let message = "negativo"
+
+    if(saldoTotal >= 0) {
+        message = "positivo"
+    }
+
+    console.log(`Seu saldo é ${message}, você tem ${saldoTotal} Reais.`)
 }
+
+calculator()
